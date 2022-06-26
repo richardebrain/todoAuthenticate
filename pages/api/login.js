@@ -1,5 +1,5 @@
-import auth0 from "./utils/auth0";
-import { handleLogin } from "@auth0/nextjs-auth0";
+import auth0 from "./utils/Auth0";
+
 
 export default async function login(req,res){
   // <= instance meth
