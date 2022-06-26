@@ -7,7 +7,7 @@ import { useContext, useEffect,useState } from "react";
 import { TodoContext } from "../context/TodoContext";
 import CutsomInput from "../components/CutsomInput";
 import CustomButton from "../components/CustomButton";
-import auth0 from "./api/utils/Auth0";
+import auth0 from "./api/utils/auth0";
 export default function Home({ initialTodos,user }) {
   const { todos, setTodos ,addTodos} = useContext(TodoContext);
 const [todo,setTodo] = useState('');
