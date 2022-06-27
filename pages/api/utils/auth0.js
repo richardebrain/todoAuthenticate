@@ -5,7 +5,7 @@ export default initAuth0({
   issuerBaseURL:'https://richardebrain.us.auth0.com',
   clientID: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID,
   clientSecret: process.env.NEXT_PUBLIC_AUTH0_CLIENT_SECRET,
-  baseURL: "http://localhost:3000/",
+  baseURL: "process.env.NEXT_PUBLIC_BASE_URL",
   
 });
 
