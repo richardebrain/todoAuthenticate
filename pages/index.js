@@ -15,7 +15,7 @@ const [todo,setTodo] = useState('');
   useEffect(() => {
     setTodos(initialTodos);
     console.log(user)
-  }, []);
+  }, [setTodos, initialTodos,user]);
 const handleChangeTodo =(e)=>{
   const {value} = e.target;
   setTodo(value);
