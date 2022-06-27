@@ -53,7 +53,7 @@ const handleAddTodo = () => {
 }
 
 export const getServerSideProps = async ({req,res}) => {
- const session = await auth0.getSession(req,res);
+ const session = auth0.getSession(req,res);
  
   try {
     const todos = await table.select({}).firstPage();
