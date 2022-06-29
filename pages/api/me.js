@@ -1,5 +1,5 @@
 
-import auth0 from './utils/Auth0'
+import auth0 from './utils/auth0'
 
 const me = async () => {
   try {
