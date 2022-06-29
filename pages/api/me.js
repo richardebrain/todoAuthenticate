@@ -11,5 +11,4 @@ const me = async () => {
     res.status(500).end(errorMessage)
   }
 }
-
 export default me
