@@ -4,6 +4,7 @@ export const TodoContext = createContext();
 
 const TodoWrapper = ({ children }) => {
   const [todos, setTodos] = useState([]);
+  const [user, setUser] = useState(null);
 
   //  fetching todos from api endpoint
   const refreshTodos = async () => {
@@ -102,6 +103,8 @@ const TodoWrapper = ({ children }) => {
         updateTodos,
         deleteTodos,
         addTodos,
+        user,
+        setUser,
       }}
     >
       {children}

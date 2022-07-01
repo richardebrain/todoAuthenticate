@@ -1,7 +1,7 @@
 
 import auth0 from '../../lib/auth0';
 
-const me = async () => {
+const me = async (req,res) => {
   try {
     await auth0.handleProfile(req, res)
   } catch (error) {

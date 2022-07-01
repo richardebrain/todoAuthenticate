@@ -1,7 +1,10 @@
 import {table,getMinifyRecord} from './utils/Airtable';
+import auth0 from '../../lib/auth0';
+
 
  const updateTodo  = async (req, res) => {
   const { id, fields } = req.body;
+  const session = auth0.getSession(req,res);
 try{
 
   const updatedRecord = await table.update([{
@@ -19,4 +22,4 @@ try{
  
 }
         
-export default updateTodo
+export default auth0.withApiAuthRequired(updateTodo)

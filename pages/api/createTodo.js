@@ -1,12 +1,17 @@
+import auth0 from '../../lib/auth0';
+
 import {table} from './utils/Airtable';
 
- const createTodos  = async (req, res) => {
+
+const createTodo = async (req, res) => {
   const {description} = req.body;
+  const session = auth0.getSession(req,res);
 try{
 
   const createdRecords = await table.create([{
     fields: {
-      description
+      description,
+      userId: session.user.sub,
     }
   }])
   const createdRecord ={
@@ -23,5 +28,5 @@ try{
 }
  
 }
-          
-export default createTodos
+
+export default auth0.withApiAuthRequired(createTodo);

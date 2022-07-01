@@ -1,18 +1,21 @@
 import Layout from "../components/Layout";
 import TodoWrapper from "../context/TodoContext";
-import { UserProvider } from "@auth0/nextjs-auth0";
+import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const { user, loading } = pageProps;
   return (
     
-  
+   
     <TodoWrapper>
+      <ThemeProvider attribute='class'>
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      </ThemeProvider>
     </TodoWrapper>
+    
     
   );
 }
