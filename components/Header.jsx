@@ -16,7 +16,7 @@ setTheme(theme === 'dark' ? 'light' : 'dark');
       </div>
   
       <div className="flex ">
-        {user ? <Link href="/api/logout">
+        {user ? <Link href="/api/logout" >
           <a className="rounded bg-black  text-white py-[6px] px-3 dark:text-white font-bold dark:bg-slate-500 dark:hover:bg-slate-600">
             Logout
           </a>
