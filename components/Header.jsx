@@ -5,7 +5,7 @@ const Header = () => {
   const { user } = useContext(TodoContext);
 
   return (
-    <header className="flex justify-between  mx-auto w-full px-6 items-center py-4 dark:bg-slate-800">
+    <header className="flex justify-between  mx-auto w-full px-6 items-center  dark:bg-slate-800 h-[15%]">
       <nav className="2xl font-bold text-white dark:text-white">My Todos</nav>
       <div className="flex ">
         {user ? <Link href="/api/logout">
