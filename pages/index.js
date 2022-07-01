@@ -53,7 +53,7 @@ export default function Home({ initialTodos, user }) {
         <div className="flex flex-col mx-4 space-y-2 sm:space-x-4 sm:flex-row sm:space-y-0">
           <CustomInput
             type="text"
-            className="form-input w-full dark:bg-slate-400 placeholder:text-white"
+            className="form-input w-full dark:bg-slate-400 dark:placeholder:text-white"
             value={todo}
             onChange={handleChangeTodo}
             placeholder="Add Todo"
@@ -61,7 +61,7 @@ export default function Home({ initialTodos, user }) {
             label
           />
           <CustomButton
-            className="bg-white  dark:hover:bg-slate-600 dark:bg-slate-500 dark:text-white rounded-none py-2 px-3 text-black font-bold sm:rounded-lg"
+            className="bg-black  dark:hover:bg-slate-600 dark:bg-slate-500 dark:text-white rounded-none py-2 px-3 text-white font-bold sm:rounded-lg"
             type="submit"
             onClick={handleAddTodo}
           >
@@ -69,7 +69,7 @@ export default function Home({ initialTodos, user }) {
           </CustomButton>
         </div>
         {
-          popBar ? <span className="text-white text-center dark:bg-white dark:text-black max-w-md ml-4 -mt-16 py-2 px-4 rounded-lg">{popBarText}</span>: null
+          popBar ? <span className="text-white bg-black text-center dark:bg-white dark:text-black mx-auto w-[90%] -mt-16 py-2 px-4 rounded-lg ">{popBarText}</span>: null
         }
         <ul className="">
           {todos && todos.map((todo) => <Todo key={todo.id} todo={todo} />)}

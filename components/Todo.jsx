@@ -17,7 +17,7 @@ const Todo = ({ todo }) => {
     updateTodos({ ...todo, fields: { ...fields, completed: !completed } });
   };
   return (
-    <li className=" flex items-center shadow-lg  my-2 mx-4 py-2 px-1 dark:bg-slate-800  sm:px-4 sm:rounded-lg">
+    <li className=" flex items-center shadow-md  bg-black shadow-gray-300 dark:shadow-gray-900 my-2 mx-4 py-2 px-1 dark:bg-slate-800  sm:px-4 sm:rounded-lg">
       <CustomInput
         name={description}
         type="checkbox"
@@ -26,11 +26,11 @@ const Todo = ({ todo }) => {
         onChange={handleToggleCompleted}
         id="checkbox"
       />
-      <p className={`flex-1 text-gray-800 dark:text-white ${completed ? "line-through" : " "}`}>
+      <p className={`flex-1 text-gray-200 dark:text-white ${completed ? "line-through" : " "}`}>
         {description}
       </p>
       <CustomButton
-        className="text-sm text-white py-1 px-2 rounded mr-1 cursor-pointer bg-red-500 hover:bg-red-600 dark:bg-slate-400 dark:hover:bg-slate-500 "
+        className="text-sm text-black font-bold py-1 px-2 rounded mr-1 cursor-pointer bg-white  dark:bg-slate-400 dark:hover:bg-slate-500 "
         onClick={handleDelete}
       >
         Delete
